@@ -1,105 +1,193 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 /**************************************************************************************************************************************************
                                                                 Header
 **************************************************************************************************************************************************/
 .navbar {
-    position: fixed;
-    width: 100%;
-    border-bottom: 2px solid #E0E0E0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  border-bottom: 2px solid #e0e0e0;
+  background-color: #ffffff;
+  z-index: 1;
 }
-.container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 5vw;
+.navContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5vw;
 }
 
 /*logo*/
-.container img {
-    width: 5vw;
-    height: 8vh;
+.navContainer img {
+  width: 5vw;
+  height: 8vh;
 }
 
 /*NavLinks*/
 .navLinks {
-    width: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-.navLinks li ,.navLinks a{
-    display: flex;
-    height: 4vh;
-    list-style-type: none;
-    text-decoration: none;
-    color: #000000;
-    align-items: center;
-    padding: 5px 8px;    
+.navLinks li,
+.navLinks a {
+  display: flex;
+  height: 4vh;
+  list-style-type: none;
+  text-decoration: none;
+  color: #000000;
+  align-items: center;
+  padding: 5px 8px;
 }
 .navLinks a:hover {
-    color: #E0E0E0;
-    background-color: #303030;
-    border-radius: 10px;
+  color: #e0e0e0;
+  background-color: #303030;
+  border-radius: 10px;
 }
 /*DropDown*/
 .dropdown {
-    position: relative;
-    display: inline-block;
+  position: relative;
+  display: inline-block;
 }
 .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 10vw;
-    box-shadow: 0px 15px 15px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-    top: 100%;
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 10vw;
+  box-shadow: 0px 15px 15px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  top: 100%;
 }
 .dropdown:hover .dropdown-content {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 .dropdown-content a {
-    color: #000000;
-    display: flex;
-    text-decoration: none;
+  color: #000000;
+  display: flex;
+  text-decoration: none;
 }
 
 /*Sign Up & Login In*/
-.navLinks .btn{
-    width: 5vw;
-    height: 4vh;
+.navLinks .btn {
+  width: 5vw;
+  height: 4vh;
 }
-.navLinks .signUp{
-    background-color: transparent;
-    color: #030303;
-    text-align: center;
-    padding: 5px 10px;
-    font-weight: bold;
+.navLinks .signUp {
+  background-color: transparent;
+  color: #030303;
+  text-align: center;
+  padding: 5px 10px;
+  font-weight: bold;
 }
-.navLinks .signUp:hover{
-    background-color: #030303;
-    color: #E0E0E0;
+.navLinks .signUp:hover {
+  background-color: #030303;
+  color: #e0e0e0;
 }
-.navLinks .login{
-    background-color: #030303;
-    color: #ffffff;
-    text-align: center;
-    padding: 5px 10px;
-    font-weight: bold;
+.navLinks .login {
+  background-color: #030303;
+  color: #ffffff;
+  text-align: center;
+  padding: 5px 10px;
+  font-weight: bold;
 }
-.navLinks .login:hover{
-    color: #030303;
-    background-color: transparent;
+.navLinks .login:hover {
+  color: #030303;
+  background-color: transparent;
 }
-
 
 /**************************************************************************************************************************************************
                                                                 MainBody
 **************************************************************************************************************************************************/
+
+#mainBody {
+  margin-top: 9vh;
+}
+.mainContainer {
+  display: flex;
+  flex-direction: row;
+  height: 91vh;
+}
+.content {
+  width: 48%;
+  height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.content .shortInfo {
+  margin: 0 0 2vh 5vw;
+}
+.content h1 {
+  font-size: 3em;
+  margin: 0 0 0 5vw;
+}
+.content .section1Desc, .content .section2Desc {
+  font-size: 1.2em;
+  margin: 3vh 0 0 5vw;
+}
+.content .mainContentbtn {
+    height: 6vh;
+    width: 10vw;
+    text-align: center;
+    padding: 5px 10px;
+  }
+.content .getStarted {
+    background-color: #030303;
+    color: #ffffff;
+    margin: 3vh 0 0 5vw;
+    cursor: pointer;
+}
+  .content .getStarted:hover {
+    color: #030303;
+    background-color: transparent;
+}
+.content .learnMore {
+    background-color: transparent;
+    color: #030303;
+    margin: 3vh 0 0 2vw;
+    cursor: pointer;
+  }
+.content .learnMore:hover {
+    background-color: #030303;
+    color: #e0e0e0;
+}
+.image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 50%;
+    padding: 0 0 0 5vw;
+}
+.image img {
+    width: 40vw;
+    height: 60vh;
+}
+.impPoints{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 3vh 0 0 5vw;
+}
+.impPoints .impPointsDivison {
+    width:50%;
+}
+.content .section2 {
+  margin: 3vh 0 0 5vw;
+}
+.content .SignUp {
+  border: none;
+  background-color: transparent;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+
+
